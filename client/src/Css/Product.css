@@ -1,0 +1,131 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+
+.post{
+    background-color: white;
+    margin: 0rem 1rem;
+    padding: 2rem 2rem;
+    border: 1px solid black;
+    width: 30%;
+    margin: auto;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+.posthead{
+    display: flex;
+    flex-wrap: wrap;
+}
+.postusername{
+    font-size: 2rem;
+    margin: auto;
+    flex: 1;
+}
+.postbtn{
+    margin: auto;
+    background-color: transparent;
+    font-size: 2rem;
+    padding: 0rem 1rem;
+    border: 1px solid #2424ff;
+    background-color: #2424ff;
+    color: whitesmoke;
+
+}
+.productname{
+    margin: 1rem 0rem;
+}
+.pic{
+    width: 6rem;
+    height:6rem;
+    border-radius: 5rem;
+    margin: 0rem 1rem;
+}
+.postbody{
+    margin: 2rem 0rem;
+}
+.postimg{
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 1rem;
+}
+.postbody  h4{
+    font-size: 2rem;
+}
+.posttext{
+    width: 100%;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 1px solid lightgray;
+}
+.posttext:focus{
+    outline: none;
+}
+.type{
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 1rem 0rem;
+}
+.productlink{
+    margin: 1rem 0rem;
+}
+
+@media only screen and (min-width:830px)and (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+    .post{
+        width: 50%;
+    }
+}
+@media only screen and (min-width:615px)and (max-width:830px) {
+    html {
+        font-size: 60%;
+    }
+    .post{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width:530px)and (max-width:615px) {
+    html {
+        font-size: 60%;
+    }
+    .post{
+        width: 90%;
+    }
+
+
+}
+
+@media only screen and (min-width:420px) and (max-width:530px) {
+    html {
+        font-size: 55%;
+    }
+    .post{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:317px) and (max-width:420px) {
+    html {
+        font-size: 55%;
+    }
+    .post{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:317px) {
+    html {
+        font-size: 40%;
+    }
+}

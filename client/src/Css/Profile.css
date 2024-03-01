@@ -1,0 +1,249 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+.profilecontainer{
+    background-color: whitesmoke;
+    margin: 0rem 1rem;
+    padding: 2rem 2rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    height:min-content;
+}
+.profileimg{
+    width: 100%;
+
+    text-align: center;
+}
+.profileimg img{
+   width: 30rem;
+   height: 30rem;
+    border-radius: 100rem;
+    margin: auto;
+    outline: 2px solid #2424ff;
+    outline-offset: 3px;
+}
+
+.edit{
+    margin: 2rem 0rem ;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+}
+.editbtn{
+    background-color: #6C63FF;
+    border: none;
+    padding: 0.5rem 1rem;
+    width:fit-content;
+    font-weight: bolder;
+    margin: 1rem 2rem;
+    color: rgb(255, 255, 255);
+   text-decoration: none;
+}
+.editbtn:hover{
+    text-decoration: none;
+    color: rgb(255, 253, 253);
+}
+.starter{
+    margin: 2rem 0rem;
+}
+h3{
+    margin-top: 1rem;
+}
+.starter input{
+    /* margin: 2rem 0rem; */
+    font-size: 2rem;
+    border-bottom: lightgray 1px solid;
+    color: black;
+
+}
+h2{
+    font-size: 4rem;
+    color: #2424ff;
+}
+.abtinput{
+    margin: 1rem 0rem;
+    width: 100%;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+   
+    height:fit-content;
+    overflow-y: hidden;
+    color: black;
+}
+
+.row4 input{
+    margin: 1rem 1rem;
+    width: 95%;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: lightgray 1px solid;
+    height:fit-content;
+    overflow-y: hidden;
+    color: black;
+}
+
+input:focus{
+    border: 2px solid #2424ff;
+    padding: 0.5rem;
+}
+.myposts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.postprofile{
+    margin: 0rem;
+    width: 30%;
+margin: 2rem 0rem;
+border: 2px solid lightgray;
+padding:2rem;
+text-align: center;
+
+}
+
+.postbodyprofile{
+    /* display: inline-block; */
+    /* width: fit-content; */
+    text-align: left;
+    margin:0rem;
+}
+.postphoto{
+    width: 100%;
+    display: block;
+}
+.piechart{
+    display: flex;
+    flex-wrap: wrap;
+}
+.chart input{
+    margin:1.5rem 0rem;
+}
+.rndbtn{
+    background-color: #6C63FF;
+    background-color: none;
+    padding: 0.5rem 1rem;
+    width:fit-content;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    /* padding: 0.5rem; */
+    border: 2px solid black;
+    border-radius: 5rem;
+}
+.pdfbtn{
+    background-color: none;
+    background-color: #6C63FF;
+    border: 1px solid black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:  0.5rem;
+    margin: 1rem 0rem;
+}
+.downloadbtn{
+    color: #2424ff;
+    font-weight: bolder;
+    margin: 0rem 3rem;
+    font-size: 1.5rem;
+}
+.nopdf{
+    height: 1rem;
+}
+@media only screen and (min-width:830px)and (max-width:1200px) {
+   
+}
+
+@media only screen and (min-width:615px)and (max-width:830px) {
+   
+}
+
+@media only screen and (min-width:530px)and (max-width:615px) {
+    html {
+        font-size: 60%;
+    }
+    /* .profileimg{
+        width: 100%;
+        text-align: center;
+    }
+    .profileimg img{
+        width: 50%;
+        border-radius: 100rem;
+        margin: auto;
+    } */
+
+}
+
+@media only screen and (min-width:420px) and (max-width:530px) {
+    html {
+        font-size: 50%;
+    }
+    /* .profileimg{
+        width: 100%;
+        text-align: center;
+    }
+    .profileimg img{
+        width: 50%;
+        border-radius: 100rem;
+        margin: auto;
+    } */
+}
+
+@media only screen and (min-width:317px) and (max-width:420px) {
+    html {
+        font-size: 40%;
+    }
+    .myposts{
+        display: block;
+        width: 100%;
+    }
+    .postprofile{
+        width: 100%;
+        margin: auto;
+    }
+    /* .profileimg{
+        width: 100%;
+        text-align: center;
+    }
+    .profileimg img{
+        width: 40%;
+        border-radius: 100rem;
+        margin: auto;
+    }
+    .editbtn{
+        background-color: #6C63FF;
+        border: none;
+        padding: 0.5rem 1rem;
+        width: 30%;
+        font-weight: bolder;
+        margin: 0rem 2rem;
+        color: rgb(255, 255, 255);
+       text-decoration: none;
+    
+    } */
+}
+
+@media only screen and (min-width:0px) and (max-width:317px) {
+    html {
+        font-size: 40%;
+    }
+    .myposts{
+        display: block;
+        width: 100%;
+    }
+    .postprofile{
+        width: 100%;
+        margin: auto;
+    }
+}

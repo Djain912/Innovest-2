@@ -1,0 +1,87 @@
+
+
+  html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0rem;  
+    margin: 0rem;
+    box-sizing: border-box;
+}
+.body{
+    /* background-color: whitesmoke; */
+height:fit-content;
+}
+.contactdiv{
+    display: inline-block;
+    padding: 1.5rem;
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 1rem;
+    /* background-color: whitesmoke; */
+    text-align: center;
+}
+ 
+  
+  label {
+    display: block;
+    margin: 0.5rem 0rem;
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin: 1rem 0rem;
+   color: black;
+   text-align: left;
+  }
+  input:focus {
+    outline: none;
+    font-size: 1.5rem;
+  }
+  
+  input {
+    width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+    box-sizing: border-box;
+    font-size: 2rem;
+    background-color: transparent;
+  }
+  input:focus{
+    font-size: 2rem;
+  }
+  .contactform button {
+    background-color: #6C63FF;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+   color: white;
+    border: none;
+    cursor: pointer;
+    margin: 2rem 0rem;
+    width: 100%;
+  }
+  .contactform button:hover{
+    background-color: #4242ff;
+  }
+  .contactcontent h1{
+    /* text-align: center; */
+    font-size: 3rem;
+  }
+
+.contactform{
+    width: 100%;
+}
+ 
+ /* @media (max-width: 768px) {
+html{
+  font-size: 60%;
+}
+} */
+
+.message{
+    width: 100%;
+   border: 2px solid black;
+   font-size: 2rem;
+  }

@@ -1,0 +1,105 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+
+.testform{
+    background-color: rgb(255, 255, 255);
+    padding: 2rem;
+    width: 40%;
+    margin: 3rem auto;
+    border: 2px solid black;
+}
+.testform p{
+    font-size: 2rem;
+    color: #2424ff;
+    font-weight: bolder;
+}
+.testform input{
+    margin-bottom: 2rem;
+}
+/* .zip p{
+    display: inline-block;
+    width: 10%;
+    color: black;
+}
+
+.zip input{
+    display: inline-block;
+    width: 90%;
+} */
+.messageform{
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+}
+.formpr img{
+width: 100%;
+}
+.formdes{
+    font-size: 2rem;
+    color: black;
+}
+
+
+@media only screen and (min-width:830px)and (max-width:1200px) {
+    html {
+        font-size: 62.5%;
+    }
+    .testform{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:615px)and (max-width:830px) {
+    html {
+        font-size: 60%;
+    }
+    .testform{
+        width: 90%;
+    }
+
+}
+
+@media only screen and (min-width:530px)and (max-width:615px) {
+    html {
+        font-size: 60%;
+    }
+    .testform{
+        width: 90%;
+    }
+
+}
+
+@media only screen and (min-width:420px) and (max-width:530px) {
+    html {
+        font-size: 50%;
+    }
+    .testform{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:317px) and (max-width:420px) {
+    html {
+        font-size: 50%;
+    }
+    .testform{
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:317px) {
+    html {
+        font-size: 40%;
+    }
+    .testform{
+        width: 100%;
+    }
+}

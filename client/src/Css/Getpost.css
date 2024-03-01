@@ -1,0 +1,183 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+
+
+.getpostdiv{
+    background-color: white;
+    margin: 0rem 1rem;
+    padding: 2rem 2rem;
+    border: 1px solid black;
+    width: 30%;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    
+}
+.posthead{
+    display: flex;
+    flex-wrap: wrap;
+}
+.postusername{
+    font-size: 2rem;
+    margin: auto;
+    flex: 1;
+}
+.like .unlikebtn{
+    margin: auto;
+    background-color: transparent;
+    font-size: 3rem;
+    padding: 0rem 0rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+    color:red;
+}
+.like .likebtn{
+    margin: auto;
+    background-color: transparent;
+    font-size: 3rem;
+    padding: 0rem 0rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5rem;
+
+}
+.likecount {
+    font-size: 2rem;
+    display: inline-block;margin-left: 1rem;
+}
+.pic{
+    width: 4rem;
+    height:4rem;
+    border-radius: 5rem;
+    margin-right: 1rem;
+}
+.postbody{
+    margin: 2rem 0rem;
+}
+.postimg{
+    width: 100%;
+    height: 50vh;
+    margin-bottom: 0rem;
+    border-radius: 2rem;
+}
+.postbody  h4{
+    font-size: 2.4rem;
+}
+.posttext{
+    width: 100%;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    border: none;
+}
+.posttext:focus{
+    outline: none;
+}
+.posttime{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.comment{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.commentinput{
+    width: 90%;
+}
+.commentbtn{
+    /* width: 20%; */
+    font-size: 2rem;
+    background-color: transparent;
+    padding: 0.5rem 0.5rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-weight: bolder;
+    border: none;
+    color: #2424ff;
+}
+.cmtbtn{
+    background-color: #2424ff;
+    font-size: 1.5rem;
+}
+.collapse .card{
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+}
+.dropdowndiv{
+    text-align: center;
+}
+.postdropdown{
+    font-size: 2rem;
+    /* color: white; */
+    margin: 3rem 0rem;
+    
+}
+.collabbtn{
+    border: 2px solid black;
+    padding: 0rem 2rem;
+    color: wheat;
+    background-color: #2424ff;
+    font-size: 2rem;
+}
+@media only screen and (min-width:830px)and (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+    .getpostdiv{
+        width: 50%;
+    }
+}
+@media only screen and (min-width:615px)and (max-width:830px) {
+    html {
+        font-size: 60%;
+    }
+    .getpostdiv{
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width:530px)and (max-width:615px) {
+    html {
+        font-size: 60%;
+    }
+    .getpostdiv{
+        width: 90%;
+    }
+
+
+}
+
+@media only screen and (min-width:420px) and (max-width:530px) {
+    html {
+        font-size: 55%;
+    }
+    .getpostdiv{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:317px) and (max-width:420px) {
+    html {
+        font-size: 55%;
+    }
+    .getpostdiv{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:0px) and (max-width:317px) {
+    html {
+        font-size: 40%;
+    }
+}

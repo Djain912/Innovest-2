@@ -1,0 +1,15 @@
+html{
+  font-size: 62.5%;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+*{
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+.bpw-chat-container{
+border: 2px solid black;
+}

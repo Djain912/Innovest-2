@@ -1,0 +1,113 @@
+html{
+  font-size: 62.5%;
+}
+
+*{
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
+@media only screen and (min-width:830px)and (max-width:1200px) {
+  html {
+      font-size: 62.5%;
+  }
+}
+
+@media only screen and (min-width:615px)and (max-width:830px) {
+  html {
+      font-size: 60%;
+  }
+
+}
+
+@media only screen and (min-width:530px)and (max-width:615px) {
+  html {
+      font-size: 60%;
+  }
+
+
+}
+
+@media only screen and (min-width:420px) and (max-width:530px) {
+  html {
+      font-size: 50%;
+  }
+}
+
+@media only screen and (min-width:317px) and (max-width:420px) {
+  html {
+      font-size: 50%;
+  }
+
+}
+
+@media only screen and (min-width:0px) and (max-width:317px) {
+  html {
+      font-size: 40%;
+  }
+}
+
+.body{
+  background-color: whitesmoke;
+height:fit-content;
+}
+.signupdiv{
+  display: inline-block;
+  /* padding: 1.5rem; */
+  margin: auto;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  border-radius: 1rem;
+  background-color: white;
+  text-align: center;
+}
+
+#role{
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;
+}
+label {
+  display: block;
+  margin: 0.5rem 0rem;
+ font-size: 1.5rem;
+ font-weight: bold;
+ margin: 1rem 0rem;
+ color: black;
+ text-align: left;
+}
+input:focus {
+  outline: none;
+  font-size: 1.5rem;
+}
+
+input {
+  width: 100%;
+border: none;
+border-bottom: 2px solid black;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+form button {
+  background-color: #6C63FF;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+ color: white;
+  border: none;
+  cursor: pointer;
+  margin: 2rem 0rem;
+  width: 100%;
+}
+form button:hover{
+  background-color: #4242ff;
+}
+.formcontent h1{
+  /* text-align: center; */
+  font-size: 3rem;
+}

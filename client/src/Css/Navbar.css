@@ -1,0 +1,49 @@
+html{
+  font-size: 62.5%;
+}
+
+*{
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
+
+.navbar{
+    font-size: 2.5rem;
+  }
+  #logohead{
+    font-size: 3rem;
+    color: #2424ff;
+  }
+  .navbar-nav .nav-item .nav-link {
+    color: black; 
+    margin: 0rem 1rem;
+    font-size: 2rem;
+  }
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #007bff; /* Change the color to your desired hover color */
+  }
+  .nav-item {
+    width: 100%;
+    display: block;
+  }
+  .dropdown-menu{
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    width: 20rem;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+ 
+  .nav-link{
+    width: 100%;
+    display: block;
+  }
+  .user-img{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    border-radius: 5rem;
+  }
