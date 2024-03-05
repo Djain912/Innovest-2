@@ -84,7 +84,7 @@ function Login() {
                         </NavLink>
                     </form>
                     {/* Conditionally render the Alert component */}
-                    {alertMessage && <Alert severity={alertSeverity}>{alertMessage}</Alert>}
+                    {/* {alertMessage && <Alert severity={alertSeverity}>{alertMessage}</Alert>} */}
                 </div>
             </div>
         </div>

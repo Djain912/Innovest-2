@@ -12,6 +12,7 @@ function Userprofile() {
 
     const { id } = useParams();
     const [mypost, setMyPosts] = useState([]);
+    const [myproduct, setMyProducts] = useState([]);
     const { user1 } = DeleveryContext();
     const [profile, setProfile] = useState({
         name: "",
@@ -48,8 +49,9 @@ function Userprofile() {
             const data = await res.json();
             console.log(data);
             setProfile(data.user)
-            console.log(profile)
             setMyPosts(data.posts)
+            setMyProducts(data.products);
+
         } catch (err) {
             console.log(err)
         }
@@ -201,7 +203,21 @@ function Userprofile() {
                                 </div>
 
                             ))}
+                            
                         </div>
+                        <h2>Products</h2>
+                        <div className='myposts'>
+                        {myproduct.map((pr, index) => (
+                                <div key={index} className='postprofile'>
+                                    <div className='postbodyprofile'>
+                                        {/* <p className='posttext'>{post.description}</p> */}
+                                        <img src={pr.image} alt='logo' className='postimg' />
+                                    </div>
+                                </div>
+
+                            ))}
+                        </div>
+                      
                     </div>
 
 

@@ -1,5 +1,6 @@
 import User from "../models/usermodel.js";
 import Post from "../models/postmodel.js";
+import Product from "../models/productmodel.js";
 
 const showprofile = async (req, res) => {
     try {
@@ -9,11 +10,13 @@ const showprofile = async (req, res) => {
         }
         
         const postData = await Post.find({ username: req.params.id });
+        const products = await Product.find({ productof: req.params.id });
         
         // Combine user data and post data into a single object
         const profileData = {
             user: userData,
-            posts: postData
+            posts: postData,
+            products: products
         };
 
         return res.status(200).json(profileData);

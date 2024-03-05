@@ -8,7 +8,7 @@ function Logout(){
     },[LogoutUser])
 
     return(
-        <Navigate to={"/login"} />
+        <Navigate to={"/"} />
     )
 }
  

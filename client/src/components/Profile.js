@@ -41,6 +41,7 @@ function Profile() {
             handleImageChange();
         }
         myposts();
+        mypr(); 
         getRound();
     }, [profile, ppimg]);
 
@@ -177,6 +178,30 @@ function Profile() {
             console.error(err);
         }
     };
+    const [myproducts, setMyProducts] = useState([]);
+    const mypr = async () => {
+        try {
+            const response = await fetch(`http://localhost:9000/myproduct/${user1._id}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem("Token")}`
+                },
+            });
+            if (!response.ok) {
+                const errorData = await response.json();
+                console.error("Failed to fetch posts:", errorData);
+            } else {
+                const data = await response.json();
+                setMyProducts(data);
+                console.log(data);
+            }
+
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
 
     const updProfile = () => {
         document.getElementById('name').disabled = false;
@@ -384,16 +409,67 @@ function Profile() {
             console.error(err);
         }
     }
+    const delpr = async (prid) => {
+        try {
+            const res = await fetch("http://localhost:9000/delproduct", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                   id: prid
+                })
+
+            })
+            if (!res.ok) {
+                const errorData = await res.json();
+                console.error("Failed to Del img:", errorData);
+                toast.error(errorData.message);
+            } else {
+                toast("Post Deleted Successfully");
+                window.location.reload();
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    }
+    
+    const delPdf = async () => {
+        try {
+            const res = await fetch("http://localhost:9000/delpdf", {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${localStorage.getItem("Token")}`
+                },
+                body: JSON.stringify({
+                    email: user1.email
+                })
+
+            })
+            if (!res.ok) {
+                const errorData = await res.json();
+                console.error("Failed to delete PDF:", errorData);
+                toast.error(errorData.message);
+            } else {
+                toast("PDF Deleted Successfully");
+                window.location.reload();
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    };
+
 
     return (
         <>
             <div className="profilecontainer">
                 <Fab color="secondary" aria-label="edit">
-                    <EditIcon onClick={updProfile} style={{ cursor: "pointer", fontSize: "3rem" }}/>
+                    <EditIcon onClick={updProfile} style={{ cursor: "pointer", fontSize: "3rem" }} />
                 </Fab>
 
                 <button className="editbtn" id="editbtn" onClick={Postdata} style={{ cursor: "pointer", fontSize: "1.5rem" }} >
-                  <CheckCircleIcon fontSize='large' />  Update Profile
+                    <CheckCircleIcon fontSize='large' />  Update Profile
                 </button>
                 <div className='row1'>
                     <div className="profileimg" data-aos="zoom-out">
@@ -486,22 +562,25 @@ function Profile() {
                     </div>
                     }
                 </div>
-
+                
 
                 {user1.pdf != null ?
-                    <div>
-                        <h2>Imp Doc</h2>
-                        <input accept='application/pdf' type="file" name='file' id='file' onChange={handlepdfUpload} />
-                        <button className='pdfbtn' onClick={handlePdf}>Upload Pdf</button>
-                        <a className='downloadbtn' target="_blank" href={user1.pdf} download>Download PDF</a>
+    <div>
+        <h2>Imp Doc</h2>
+        <input accept='application/pdf' type="file" name='file' id='file' onChange={handlepdfUpload} />
+        <button className='pdfbtn' onClick={handlePdf}>Upload Pdf</button>
+        <a className='downloadbtn' target="_blank" href={user1.pdf} download>Download PDF</a>
+        <button className="editbtn" onClick={delPdf} style={{ backgroundColor: "red", color: "white", marginLeft: "10px" }}><DeleteForeverIcon fontSize='large' /> Delete document</button>
+        <embed src={user1.pdf} type="application/pdf" width="100%" height="600px" />
+    </div> :
+    <div>
+        <h2>Imp Doc </h2>
+        <input accept='application/pdf' type="file" name='file' id='file' onChange={handlepdfUpload} />
+        <button className='pdfbtn' onClick={handlePdf}>Upload Pdf</button>
+    </div>
+}
 
-                        <embed src={user1.pdf} type="application/pdf" width="100%" height="600px" />
-                    </div> : <div>
-                        <h2>Imp Doc </h2>
-                        <input accept='application/pdf' type="file" name='file' id='file' onChange={handlepdfUpload} />
-                        <button className='pdfbtn' onClick={handlePdf}>Upload Pdf</button>
-                    </div>
-                }
+
                 {mypost.length > 0 ? <div>
                     <h2>My Posts</h2 >
                     <div className='myposts' >
@@ -515,6 +594,24 @@ function Profile() {
                                     }
                                 </div>
                                 <button className="editbtn" onClick={() => delpost(post._id)} style={{ backgroundColor: "red", width: "fit-content", height: "fit-content", color: "white" }}><DeleteForeverIcon fontSize='large' /></button>
+                            </div>
+
+                        ))}
+                    </div>
+                </div> : null}
+                {myproducts.length > 0 ? <div>
+                    <h2>My Products</h2 >
+                    <div className='myposts' >
+                        {myproducts.map((pr, index) => (
+
+                            <div key={index} className='postprofile'>
+
+                                <div className='postbodyprofile'>
+                                 <img src={pr.image } alt='logo' className='postimg' /> 
+                                        <h1>{pr.description}</h1>
+                                
+                                </div>
+                                <button className="editbtn" onClick={() => delpr(pr._id)} style={{ backgroundColor: "red", width: "fit-content", height: "fit-content", color: "white" }}><DeleteForeverIcon fontSize='large' /></button>
                             </div>
 
                         ))}

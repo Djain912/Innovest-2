@@ -2,7 +2,7 @@ import User from "../models/usermodel.js";
 import Contact from "../models/contactschema.js";
 import bcryptjs from "bcryptjs";
 import axios from "axios";
-import Round from "../models/roundmodel.js";
+
 
 
 const home = async (req, res) => {
@@ -16,6 +16,9 @@ const signup = async (req, res) => {
     try {
         const { name, email, phone,role, password, cpassword } = req.body;
 
+        if (!name || !email || !phone || !role || !password || !cpassword) {
+            return res.status(400).json({ message: "Please fill all the fields" });
+        }
 
         const userExist = await User.findOne({ email: email });
 
@@ -23,7 +26,8 @@ const signup = async (req, res) => {
             return res.status(400).json({ message: "user is existing" })
         }
         const phonecheck = /^[0-9]{10}$/; 
-        if (phonecheck.test(phone) === false) {
+        const phonecheck2 = /^\+\d{12}$/;
+        if (phonecheck.test(phone) === false && phonecheck2.test(phone) === false) {
             return res.status(400).json({ message: "Enter Valid Phone Number" });
         }
         if(role === ""){
@@ -174,4 +178,15 @@ const pdf = async (req, res) => {
         return res.status(500).json({ message: "Internal server error" });
     }
 }
-export { home, signup, login, contact, news, user, profile,delpimg,pdf };
+
+const delpdf = async (req, res) => {
+    try {
+        const { email } = req.body;
+        const profile = await User.updateOne({ email }, { pdf: "" }).exec();
+        return res.status(200).json({ message: profile });
+    } catch (err) {
+        console.error("Error updating profile:", err);
+    }
+    
+}
+export { home, signup, login, contact, news, user, profile,delpimg,pdf,delpdf };

@@ -1,7 +1,7 @@
 import express from "express";
 import User from "../models/usermodel.js";
 const router = express.Router();
-import {home,signup,login,contact,news,user,profile,delpimg,pdf} from "../controllers/auth-contoll.js";
+import {home,signup,login,contact,news,user,profile,delpimg,pdf,delpdf} from "../controllers/auth-contoll.js";
 import signupSchema, { contactSchema } from "../validators/validator.js";
 import {validate} from "../validators/validator.js";
 import {loginErrorSchem} from "../validators/validator.js";
@@ -12,7 +12,7 @@ import allUsers from "../controllers/allUsers.js";
 import {accessChat,fetchChats,crtGrpChat,rnmgrp,addtogrp,rmfromgrp} from "../controllers/chatControll.js";
 import {getRound,addRound,profilegetround} from "../controllers/round-controll.js";
 import {LiveFunc,LiveList,RoomFunc} from "../controllers/livecontroller.js"
-import { addproduct,getproduct,prdetail } from "../controllers/product-controll.js";
+import { addproduct,getproduct,prdetail,myproduct,delproduct } from "../controllers/product-controll.js";
 import {sendMail,cmail} from "../controllers/mailcontroll.js"
 import {sendmsg,allmsg} from "../controllers/message.js"
 
@@ -37,6 +37,8 @@ router.route("/unlikepost").put(authUserTokenMid,unlikepost);
 router.route("/comments").put(authUserTokenMid,comments);
 router.route("/myposts").post(myposts);
 router.route("/delpost").put(delpost);
+router.route("/delpdf").put(delpdf);
+
 
 ///
 router.route("/showprofile/:id").get(showprofile);
@@ -48,6 +50,8 @@ router.route("/group").post(authUserTokenMid,crtGrpChat);
 router.route("/renamegrp").put(authUserTokenMid,rnmgrp);
 router.route("/addToGrp").put(authUserTokenMid,addtogrp);
 router.route("/rmFromGrp").put(authUserTokenMid,rmfromgrp);
+
+// router.route("/verify/:verificationToken").get(verifyuser); 
 
 router.route("/addRound").post(authUserTokenMid,addRound);
 router.route("/getRound").get(authUserTokenMid,getRound);
@@ -62,6 +66,8 @@ router.route("/liveget").get(LiveList);
 router.route("/addproduct").post(authUserTokenMid,addproduct);
 router.route("/getproduct").get(getproduct);
 router.route("/prdetail/:id").get(prdetail);
+router.route("/myproduct/:id").get(myproduct);
+router.route("/delproduct").put(delproduct);
 
 //mail
 router.route("/mail").post(sendMail);

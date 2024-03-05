@@ -9,13 +9,13 @@ const emailverify = async (email,subject,text) => {
         port : 587,
         secure : true,
         auth : {
-            user : "your-email",
-            pass : "your-password"
+            user : "djain93260@gmail.com",
+            pass : "lfyz krdm pvpj idyt"
         }
      
     })
     await transporter.sendMail({
-        from : "your-email",
+        from : "djain93260@gmail.com",
         to : email,
         subject : subject,
         text : text

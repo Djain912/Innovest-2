@@ -62,7 +62,10 @@ const userSchema = new moongose.Schema({
     pdf:{
         type:String
     },
-    verified:{
+    verificationToken:{
+        type:String,
+    },
+    isVerified:{
         type:Boolean,
         default:false
     }
